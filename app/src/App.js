@@ -10,21 +10,24 @@ constructor() {
   this.state = {
     sidebarOpen: false
   }
+
+  this.openSideNav = this.openSideNav.bind(this)
 }
 
-handleViewSidebar(){
+openSideNav(){
   if(!this.state.sidebarOpen) {
     this.setState({sidebarOpen: true});
   } else {
     this.setState({sidebarOpen: false});
   }
+  // this.setState({sidebarOpen: !this.state.sidebarOpen});
 }
 
   render() {
     return (
       <div className="App">
-        <Header openNav={this.handleViewSidebar} />
-        <Sidenav isOpen={this.state.sidebarOpen} />
+        <Header openNav={this.openSideNav} />
+        <Sidenav isNavOpen={this.state.sidebarOpen} />
 
       </div>
     );

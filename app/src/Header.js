@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header(props){
       return (
         <header>
-            <a href="javascript:;" onClick={props.openNav}>Click Me!</a>
+            <button onClick={props.openNav}>Click Me!</button>
           </header>
       );
 }

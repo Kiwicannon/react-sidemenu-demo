@@ -23,11 +23,9 @@
   to { transform: rotate(360deg); }
 }
 
+/* ////////////////////// */
+
 header { 
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   height: 60px;
   background-color: darkblue;
   color: lightgray;
@@ -39,8 +37,17 @@ header {
   height: 100%;
   width: 300px;
   transition: left .3s ease-in-out;
-  background-color: white;
+  color: white;
+  background: black;
 }
-.sidebar open {
-    left: 0;
-}
+
+.sidebarOpen {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    height: 100%;
+    width: 300px;
+    transition: left .3s ease-in-out;
+    background-color: black;
+    color: white;
+  }
